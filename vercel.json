@@ -3,29 +3,17 @@
     "framework": null,
     "functions": {
         "api/index.php": {
-            "runtime": "vercel-php@0.6.2"
+            "runtime": "vercel-php@0.7.0"
         }
     },
     "routes": [
         {
+            "src": "/(favicon\\.ico|robots\\.txt)",
+            "dest": "/public/$1"
+        },
+        {
             "src": "/build/(.*)",
-            "dest": "/public/build/"
-        },
-        {
-            "src": "/resources/(.*)",
-            "dest": "/public/resources/"
-        },
-        {
-            "src": "/favicon/(.*)",
-            "dest": "/public/favicon/"
-        },
-        {
-            "src": "/plugins/(.*)",
-            "dest": "/public/plugins/"
-        },
-        {
-            "src": "/logo/(.*)",
-            "dest": "/public/logo/"
+            "dest": "/public/build/$1"
         },
         {
             "src": "/(.*)",
@@ -33,11 +21,11 @@
         }
     ],
     "env": {
-        "APP_NAME": "css-bans",
+        "APP_NAME": "api.treckstar.net",
         "APP_ENV": "production",
+        "APP_KEY" : "base64:fLrLvaRDZZtt8C8eOy+c+mvFvIXBzkQNbD38eV3G7vQ=",
         "APP_DEBUG": "false",
-        "APP_KEY" : "base64:fax7xBina3JsFf+f/8yzkZqR8RAtC1lR2uJtCFdtQ99=",
-        "APP_URL": "https://css-bans-demo.vercel.app",
+        "APP_URL": "https://api.treckstar.net",
         "VERCEL_DEMO_MODE": "true",
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
@@ -46,7 +34,7 @@
         "APP_SERVICES_CACHE": "/tmp/services.php",
         "CACHE_DRIVER": "array",
         "LOG_CHANNEL": "stderr",
-        "SESSION_DRIVER": "cookie",
+        "SESSION_DRIVER": "array",
         "VIEW_COMPILED_PATH": "/tmp/views",
         "SSR_TEMP_PATH": "/tmp/ssr",
         "NODE_PATH": "node"
