@@ -37,7 +37,7 @@
         "APP_ENV": "production",
         "APP_DEBUG": "false",
         "APP_KEY" : "base64:fax7xBina3JsFf+f/8yzkZqR8RAtC1lR2uJtCFdtQ99=",
-        "APP_URL": "https://css-bans.online",
+        "APP_URL": "https://css-bans-demo.vercel.app",
         "VERCEL_DEMO_MODE": "true",
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
@@ -46,7 +46,7 @@
         "APP_SERVICES_CACHE": "/tmp/services.php",
         "CACHE_DRIVER": "array",
         "LOG_CHANNEL": "stderr",
-        "SESSION_DRIVER": "array",
+        "SESSION_DRIVER": "cookie",
         "VIEW_COMPILED_PATH": "/tmp/views",
         "SSR_TEMP_PATH": "/tmp/ssr",
         "NODE_PATH": "node"
