@@ -1,19 +1,13 @@
 {
     "version": 2,
-    "framework": null,
-    "functions": {
-        "api/index.php": {
-            "runtime": "vercel-php@0.7.0"
-        }
-    },
+    "builds": [
+        { "src": "/api/index.php", "use": "vercel-php@0.7.0" },
+        { "src": "/public/**", "use": "@vercel/static" }
+    ],
     "routes": [
         {
-            "src": "/(favicon\\.ico|robots\\.txt)",
-            "dest": "/public/$1"
-        },
-        {
-            "src": "/build/(.*)",
-            "dest": "/public/build/$1"
+            "src": "/(css|js)/(.*)",
+            "dest": "public/$1/$2"
         },
         {
             "src": "/(.*)",
@@ -21,11 +15,10 @@
         }
     ],
     "env": {
-        "APP_NAME": "api.treckstar.net",
+        "APP_NAME": "Vercel Laravel",
         "APP_ENV": "production",
-        "APP_KEY" : "base64:fLrLvaRDZZtt8C8eOy+c+mvFvIXBzkQNbD38eV3G7vQ=",
         "APP_DEBUG": "false",
-        "APP_URL": "https://api.treckstar.net",
+        "APP_URL": "https://php-laravel.vercel.app",
         "VERCEL_DEMO_MODE": "true",
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
